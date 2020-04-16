@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="myScript.js"></script>
+  </head>
+  <body>
+    <form>
+      <div>
+        <span>
+          <label for="firstname">Firstname:</label>
+          <input id="firstname" type="text" name="firstname" value="Ejike" />
+        </span>
+        <span>
+          <label for="lastname"> Lastname:</label>
+          <input id="lastname" type="text" name="lastname" value="Chiboka" />
+        </span>
+      </div>
+
+      <div>
+        <span>
+          <label for="Centimeters"> Height CM:</label>
+          <input id="cm" value="177" />
+        </span>
+      </div>
+      <div>
+        <label for="Date-of-birth"> Date of Birth: </label>
+        <input type="date" id="birth" />
+      </div>
+
+      <div>
+        <label for="email"> Email Address: </label>
+        <input type="email" id="eaddy" name="email" />
+      </div>
+
+      <div>
+        <label for="work"> Place of Work: </label>
+        <input id="work" name="work" />
+      </div>
+
+      <div id="school">
+        <h5 id="univ">EDUCATION ATTAINED</h5>
+        <div id="school1">
+          <span>
+            <label for="univ1">University:</label>
+            <input type="text" id="univ1" name="univ1" />
+
+            <label for="course1">Course:</label>
+            <input type="text" id="course1" name="course1" />
+
+            <label for="start1">Start:</label>
+            <input id="start1" name="start1" value="1975" />
+
+            <label for="end1">End:</label>
+            <input id="end1" name="end1" value="1980" />
+
+            <label for="duration1">Duration:</label>
+            <input id="duration1" onmousedown="getDur1()" name="duration1" />
+          </span>
+        </div>
+        <div id="school1">
+          <span>
+            <label for="univ2">University:</label>
+            <input id="univ2" name="univ2" />
+            <label for="course2">Course:</label>
+            <input type="text" id="course2" name="course2" />
+
+            <label for="start2">Start:</label>
+            <input id="start2" name="start2" value="1975" />
+
+            <label for="end2">End:</label>
+            <input id="end2" name="end2" value="1980" />
+
+            <label for="duration2">Duration:</label>
+            <input id="duration2" onmousedown="getDur2()" name="duration2" />
+          </span>
+        </div>
+        <div id="school1">
+          <span>
+            <label for="univ3"> University: </label>
+            <input id="univ3" name="univ3" />
+            <label for="course3">Course:</label>
+            <input type="text" id="course3" name="course3" />
+
+            <label for="start3">Start:</label>
+            <input id="start3" name="start3" value="1975" />
+
+            <label for="end3">End:</label>
+            <input id="end3" name="end3" value="1980" />
+
+            <label for="duration3">Duration:</label>
+            <input id="duration3" onmousedown="getDur3()" name="duration3" />
+          </span>
+        </div>
+      </div>
+      <br />
+      <div>
+        <label for="nation"> Nationality: </label>
+        <input id="nation" name="nation" />
+      </div>
+      <div>
+        <h5 id="empstatus">EMPLOYMENT STATUS:</h5>
+        <label for="emp">Employed</label>
+        <input type="radio" id="emp" name="emp" value="Employed" /><br />
+        <label for="unemp">Unemployed</label>
+        <input type="radio" id="unemp" name="emp" value="Unemployed" /><br />
+        <label for="semp">Self-Employed</label>
+        <input type="radio" id="semp" name="emp" value="Self-Employed" /><br />
+      </div>
+      <br />
+      <div>
+        <button type="button" onclick="submitAll()">Submit</button>
+      </div>
+      <br /><br />
+
+      <div>
+        <span>Fullname:</span>
+        <span id="demo"> </span>
+        <span id="demo1"></span>
+      </div>
+      <div>
+        <span>Height:</span>
+        <span id="feet"></span>
+        <span id="inch"></span>
+      </div>
+      <div>
+        <span>Date of Birth:</span>
+        <span id="dob"></span>
+      </div>
+      <div>
+        <span>Email:</span>
+        <span id="em"></span>
+      </div>
+      <div>
+        <span>Place of Work:</span>
+        <span id="pow"></span>
+      </div>
+      <div id="sch">
+        <h5 id="univ">
+          EDUCATION ATTAINED:
+        </h5>
+        <div id="sch1">
+          <span> University:</span>
+          <span id="uni1"></span>
+          <span> Course:</span>
+          <span id="cour1"></span>
+          <span> Start:</span>
+          <span id="st1"></span>
+          <span> End:</span>
+          <span id="e1"></span>
+          <span> Duration:</span>
+          <span id="unidur1"></span>
+        </div>
+        <div id="sch2">
+          <span> University:</span>
+          <span id="uni2"></span>
+          <span> Course:</span>
+          <span id="cour2"></span>
+          <span> Start:</span>
+          <span id="st2"></span>
+          <span> End:</span>
+          <span id="e2"></span>
+          <span> Duration:</span>
+          <span id="unidur2"></span>
+        </div>
+        <div id="sch3">
+          <span> University:</span>
+          <span id="uni3"></span>
+          <span> Course:</span>
+          <span id="cour3"></span>
+          <span> Start:</span>
+          <span id="st3"></span>
+          <span> End:</span>
+          <span id="e3"></span>
+          <span> Duration:</span>
+          <span id="unidur3"></span>
+        </div>
+      </div>
+      <br />
+      <div>
+        <span>Nationality:</span>
+        <span id="nationality"></span>
+      </div>
+
+      <div>
+        <span>Employment Status:</span>
+        <span id="empstat"></span>
+      </div>
+    </form>
+  </body>
+</html>
